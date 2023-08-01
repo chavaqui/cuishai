@@ -1,0 +1,61 @@
+<div class="container container-fluid">
+  <form [formGroup]="formCommentator" (ngSubmit)="onSubmit()">
+    <div class="mt-2">
+      <i class=""></i>
+
+    </div>
+    <div>
+      <label for="header">Ingresa tu correo: </label>
+      <input type="text"
+             id="header"
+             class="form-control"
+             formControlName="email"
+             placeholder="example@gmail.com">
+    </div>
+    <div class="mt-2 mb-2">
+      <label for="header2">Ingresa tu comentario: </label>
+      <input type="text" id="header2"
+             placeholder="..."
+             class="form-control"
+             formControlName="comment">
+      <button *ngIf="!validToSend()" type="button" disabled class="btn btn-outline-success m-2">
+        Send
+      </button>
+      <button *ngIf="validToSend()" type="submit" class="btn btn-success m-2">
+        Send me
+      </button>
+      <button type="submit" class="btn btn-success btn-lg m-2">
+        Send me here
+      </button>
+      <button type="submit" class="btn btn-success btn-sm m-2">
+        Send me here
+      </button>
+    </div>
+  </form>
+  <div class="card  m-2">
+    a
+  </div>
+  <div class="card m-3">
+    <p>home-page works!</p>
+    🔥🔥🔥🔥🔥🔥🔥<i class="fa fa-ghost fa-10x m-2 colored-chq"></i>🔥🔥🔥🔥🔥🔥🔥
+  </div>
+
+  <div class="card p-2">
+    <ngb-alert type="success">
+      ¡Este es un mensaje de éxito!
+    </ngb-alert>
+  </div>
+  <div class="row">
+    <div class="col col-md-6 col-lg-6">
+      <nav>
+        <a routerLink="">link 1</a>
+      </nav>
+    </div>
+    <div class="col col-md-6 col-lg-6">
+      <nav>
+        <a routerLink="/about-us">link 2</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
