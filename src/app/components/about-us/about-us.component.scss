@@ -1,0 +1,39 @@
+.color-orange-cvq {
+  color: #e06c1f;
+}
+
+.table-container {
+  display: grid;
+  //grid-template-columns: 2fr 3fr 1fr;
+  grid-template-columns: 50% calc(25% - 20px) calc(25% - 20px);
+  grid-gap: 20px;
+}
+
+//table {
+//  width: 100%;
+//  border-collapse: collapse;
+//}
+//table {
+//  display: grid;
+//  //grid-template-rows: 1.25rem 1fr; //1.25rem header height,1fr tbody
+//  grid-template-columns: 1fr 2fr 4fr;
+//  height: 150px
+//}
+
+th, td {
+  //padding: 8px;
+  border: 1px solid #a83030;
+}
+
+//th {
+//  background-color: #f2f2f2;
+//}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+div {
+  border: darkcyan solid  3px;
+
+}

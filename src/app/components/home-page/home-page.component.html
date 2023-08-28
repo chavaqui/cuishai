@@ -18,10 +18,10 @@
              placeholder="..."
              class="form-control"
              formControlName="comment">
-      <button *ngIf="!validToSend()" type="button" disabled class="btn btn-outline-success m-2">
+      <button *ngIf="!formCommentator.valid" type="button" disabled class="btn btn-outline-success m-2">
         Send
       </button>
-      <button *ngIf="validToSend()" type="submit" class="btn btn-success m-2">
+      <button *ngIf="formCommentator.valid" type="submit" class="btn btn-success m-2">
         Send me
       </button>
       <button type="submit" class="btn btn-success btn-lg m-2">
@@ -37,7 +37,7 @@
   </div>
   <div class="card m-3">
     <p>home-page works!</p>
-    🔥🔥🔥🔥🔥🔥🔥<i class="fa fa-ghost fa-10x m-2 colored-chq"></i>🔥🔥🔥🔥🔥🔥🔥
+    🔥🔥🔥🔥🔥🔥🔥<i class="fa fa-ghost fa-10x m-2 colored-cvq"></i>🔥🔥🔥🔥🔥🔥🔥
   </div>
 
   <div class="card p-2">
@@ -56,6 +56,15 @@
         <a routerLink="/about-us">link 2</a>
       </nav>
     </div>
+  </div>
+  <br>
+  <div>
+    <button  type="button" class="btn btn-primary"
+    (click)="recoverPersonalInformation()">Fill data</button>
+  </div>
+  <div>
+    <button class="btn btn-warning btn-sm" (click)="showWaifu()">Besto waifu</button>
+    <ngb-alert *ngIf="waifu!==''" type="info">TU waifu es : {{waifu}}</ngb-alert>
   </div>
 </div>
 

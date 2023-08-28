@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <pre>{{formRecoverInfo.value | json}}</pre>
+  <p>Hello, {{ name }}!</p>
+  <form [formGroup]="formRecoverInfo" (ngSubmit)="saveDataCollected()">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <label for="idol">Idol name</label>
+      <input type="text" id="idol" class="form-control" placeholder="Your idol <3"
+      formControlName="idolName">
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm">save</button>
+    <button type="button" class="btn btn-success btn-sm"
+    (click)="sendBackMyIdol(this.formRecoverInfo.get('idolName')?.value)">send back</button>
+  </form>
+</div>
+<div class="modal-footer">
+  <form [formGroup]="formRecoverInfo">
+    <input type="text" class="form-control col-md-3" formControlName="proName">
+    <textarea name="daw" id="" rows="3" class="form-control"></textarea>
+    <button type="submit" class="btn btn-outline-danger">Close</button>
+  </form>
+</div>
